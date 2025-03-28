@@ -38,7 +38,7 @@ states = np.array(states)
 average_every = 10
 time_steps = range(1, n_steps, average_every)
 
-plt.figure()
+plt.figure(figsize=(8, 5))
 for i, label in enumerate(state_space):
     empirical_probabilities = [np.sum(states[:t] == i) / t for t in time_steps]
     plt.plot(time_steps, empirical_probabilities, label=label)
