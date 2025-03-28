@@ -52,4 +52,4 @@ $ python mcmc_epanechnikov.py
 $ python mcmc_gibbs_multivar_normal_independent.py
 ```
 
-![])figs/gibbs_sampler_independent.png
+![](figs/gibbs_sampler_independent.png)
