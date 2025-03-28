@@ -25,7 +25,7 @@ Discrete 3 state Markov Chain example
 $ python markov_chain.py
 ```
 
-![](./figs/markov_chain.png)
+![](figs/markov_chain.png)
 
 ## Sampling through Markov Chain Monte Carlo
 
@@ -35,7 +35,7 @@ $ python markov_chain.py
 $ python mcmc_normal.py
 ```
 
-![](./figs/normal.png)
+![](figs/normal.png)
 
 - MCMC for Epanechnikov distribution
 
@@ -43,6 +43,6 @@ $ python mcmc_normal.py
 $ python mcmc_epanechnikov.py
 ```
 
-![](./figs/epanechnikov.png)
+![](figs/epanechnikov.png)
 
 
