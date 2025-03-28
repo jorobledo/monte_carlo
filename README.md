@@ -28,6 +28,7 @@ $ python markov_chain.py
 ![](figs/markov_chain.png)
 
 ## Sampling through Markov Chain Monte Carlo
+### Metropolis Hasting Algorithm
 
 - MCMC for normal distribution
 
@@ -45,4 +46,10 @@ $ python mcmc_epanechnikov.py
 
 ![](figs/epanechnikov.png)
 
+### Gibbs sampler for 2D independent multivariate normal
 
+```bash
+$ python mcmc_gibbs_multivar_normal_independent.py
+```
+
+![])figs/gibbs_sampler_independent.png
