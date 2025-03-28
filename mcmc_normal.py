@@ -39,7 +39,7 @@ def sample(x_current, log_prob, stepsize):
         return accept, x_current
 
 
-n_steps = 10000
+n_steps = 1000000
 stepsize = 4
 x0 = 1
 chain = [proposal(x0, stepsize)]
@@ -55,7 +55,7 @@ print(f"{acceptance_rate=}")
 print(f"Last ten states of chain : {chain[-10:]}")
 
 plt.figure()
-hist = plt.hist(chain, bins=50, color="blue", alpha=0.6, density=True, label="MCMC samples")
+hist = plt.hist(chain, bins=100, color="blue", alpha=0.6, density=True, label="MCMC samples")
 
 # To plot the normalized density function, we can calculate the constant numerically.
 norm_const, _ = quad(lambda x: np.exp(log_prob(x)), -np.inf, np.inf)
