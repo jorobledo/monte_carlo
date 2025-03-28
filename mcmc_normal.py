@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from scipy.integrate import quad
+from scipy.stats import norm
 
 np.random.seed(42)
 
@@ -53,5 +55,17 @@ print(f"{acceptance_rate=}")
 print(f"Last ten states of chain : {chain[-10:]}")
 
 plt.figure()
-plt.hist(chain, bins=50, density=True, label="MCMC samples")
+hist = plt.hist(chain, bins=50, color="blue", alpha=0.6, density=True, label="MCMC samples")
+
+# To plot the normalized density function, we can calculate the constant numerically.
+norm_const, _ = quad(lambda x: np.exp(log_prob(x)), -np.inf, np.inf)
+x_low, x_high = hist[1][[0,-1]]
+x = np.linspace(x_low, x_high, 200)
+y = [np.exp(log_prob(xi))/norm_const for xi in x]
+y2 = norm.pdf(x, 0, 1) 
+plt.plot(x, y, "r-", label="Numerical Density")
+plt.plot(x, y2, "--",  color="orange", label="True Density")
+plt.legend()
+plt.xlabel("x")
+plt.ylabel("Density")
 plt.show()
