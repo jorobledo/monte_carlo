@@ -1,5 +1,11 @@
 # Monte Carlo methods
 
+Just needs `matplotlib`, `numpy`, and `scipy`
+
+```bash
+pip install -r requirements.txt
+```
+
 ## Monte Carlo Integration
 
 ```bash
@@ -16,7 +22,7 @@ Integral of x**2 between (-1, 1) is 0.666697
 Discrete 3 state Markov Chain example
 
 ```bash
-python markov_chain.py
+$ python markov_chain.py
 ```
 
 ![](./figs/markov_chain.png)

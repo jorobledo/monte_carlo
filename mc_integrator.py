@@ -16,8 +16,8 @@ def h(x):
 
 
 # expr = "np.sin(x)"
-expr = input("Enter a function of x (e.g., x**2, np.sin(x), np.exp(x)): \n")
-limits = ast.literal_eval(input("Define limits of integration in format (upper, lower) (e.g. (0,1), (-1,1)):\n"))
+expr = input("> Enter a function of x (e.g., x**2, np.sin(x), np.exp(x)): \n")
+limits = ast.literal_eval(input("> Define limits of integration in format (upper, lower) (e.g. (0,1), (-1,1)):\n"))
 
 f = lambda x: eval(expr, {"x":x, "np":np})
 
