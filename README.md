@@ -46,7 +46,9 @@ $ python mcmc_epanechnikov.py
 
 ![](figs/epanechnikov.png)
 
-### Gibbs sampler for 2D independent multivariate normal
+### Gibbs sampler Algorithm
+
+- for 2D independent multivariate normal
 
 ```bash
 $ python mcmc_gibbs_multivar_normal_independent.py
