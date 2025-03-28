@@ -54,7 +54,7 @@ print(f"{acceptance_rate=}")
 
 print(f"Last ten states of chain : {chain[-10:]}")
 
-plt.figure()
+plt.figure(figsize=(8, 5))
 hist = plt.hist(chain, bins=100, color="blue", alpha=0.6, density=True, label="MCMC samples")
 
 # To plot the normalized density function, we can calculate the constant numerically.
